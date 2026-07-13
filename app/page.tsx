@@ -59,8 +59,8 @@ export default function Home() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center">
-          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-8 items-center max-w-7xl mx-auto">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center py-4">
+          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-4 md:gap-8 items-center max-w-7xl mx-auto">
             {/* Left Content */}
             <div>
               <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-white/20">
@@ -79,46 +79,46 @@ export default function Home() {
                 <span className="text-white text-sm font-semibold">ERP #1 en Gestión de Loteos</span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 leading-tight">
                 Vende más parcelas<br />
                 con <span className="text-[#7c9de8]">gestión profesional</span>
               </h1>
 
-              <p className="text-base text-blue-100 mb-3 leading-relaxed max-w-2xl">
-                Controla proyectos, stock, clientes y cobranza en una plataforma<br />
+              <p className="text-sm md:text-base text-blue-100 mb-2 md:mb-3 leading-relaxed max-w-2xl">
+                Controla proyectos, stock, clientes y cobranza en una plataforma
                 diseñada específicamente para desarrolladores de lotes.
               </p>
 
-              <p className="text-white text-lg font-bold mb-4">
+              <p className="text-white text-base md:text-lg font-bold mb-3 md:mb-4">
                 Sin Excel. Sin WhatsApp. Sin errores.
               </p>
 
               {/* Waitlist Moderna */}
-              <div className="mb-3">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              <div className="mb-2 md:mb-3">
+                <div className="flex items-center gap-2 mb-2 md:mb-3">
+                  <div className="w-7 h-7 md:w-8 md:h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-base">Ten acceso anticipado</h3>
-                    <p className="text-blue-100 text-xs">Sé de los primeros en probar Softerreno</p>
+                    <h3 className="text-white font-bold text-sm md:text-base">Ten acceso anticipado</h3>
+                    <p className="text-blue-100 text-xs hidden md:block">Sé de los primeros en probar Softerreno</p>
                   </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div className="flex gap-2">
+                <form onSubmit={handleSubmit} className="space-y-2 md:space-y-3">
+                  <div className="flex flex-col md:flex-row gap-2">
                     <input
                       type="email"
                       placeholder="tu@email.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="flex-1 px-4 py-3 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm font-medium shadow-lg"
+                      className="flex-1 px-3 py-2 md:px-4 md:py-3 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm font-medium shadow-lg"
                     />
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white px-6 py-3 rounded-xl font-bold text-sm hover:from-[#2563eb] hover:to-[#1d4ed8] transition shadow-lg whitespace-nowrap"
+                      className="bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white px-4 py-2 md:px-6 md:py-3 rounded-xl font-bold text-sm hover:from-[#2563eb] hover:to-[#1d4ed8] transition shadow-lg whitespace-nowrap"
                     >
                       {isSubmitting ? 'Enviando...' : 'Registrarme'}
                     </button>
@@ -154,8 +154,8 @@ export default function Home() {
             </div>
 
             {/* Right - Dashboard Preview con IMAGEN REAL */}
-            <div className="relative w-full lg:ml-auto lg:max-w-2xl lg:-mr-12">
-              {/* Card flotante "Parcelas vendidas" - ABAJO */}
+            <div className="relative w-full lg:ml-auto lg:max-w-2xl lg:-mr-12 mt-4 lg:mt-0">
+              {/* Card flotante "Parcelas vendidas" - ABAJO - OCULTA EN MOBILE */}
               <motion.div
                 initial={{ y: 0 }}
                 animate={{ y: [0, -10, 0] }}
@@ -164,7 +164,7 @@ export default function Home() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -left-12 bottom-1/4 z-10 bg-white rounded-lg shadow-xl p-2.5 w-40"
+                className="hidden lg:block absolute -left-12 bottom-1/4 z-10 bg-white rounded-lg shadow-xl p-2.5 w-40"
               >
                 <p className="text-gray-500 text-[10px] mb-0.5">Parcelas vendidas</p>
                 <div className="flex items-end justify-between">
@@ -199,7 +199,7 @@ export default function Home() {
                 />
               </div>
 
-              {/* Card flotante "Ventas del mes" - ARRIBA */}
+              {/* Card flotante "Ventas del mes" - ARRIBA - OCULTA EN MOBILE */}
               <motion.div
                 initial={{ y: 0 }}
                 animate={{ y: [0, 10, 0] }}
@@ -209,7 +209,7 @@ export default function Home() {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute -right-8 top-1/4 z-10 bg-gradient-to-br from-[#4169e1] to-[#3b82f6] rounded-lg shadow-xl p-3 w-40 text-white"
+                className="hidden lg:block absolute -right-8 top-1/4 z-10 bg-gradient-to-br from-[#4169e1] to-[#3b82f6] rounded-lg shadow-xl p-3 w-40 text-white"
               >
                 <p className="text-blue-100 text-[10px] mb-0.5">Ventas del mes</p>
                 <div className="flex items-end justify-between">
@@ -224,8 +224,8 @@ export default function Home() {
           </div>
 
           {/* Beneficios debajo - Cards optimizadas */}
-          <div className="mt-8 max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-3">
+          <div className="mt-4 md:mt-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
               {[
                 {
                   icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
@@ -248,20 +248,20 @@ export default function Home() {
                   desc: 'Línea directa con el equipo'
                 }
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-3 hover:bg-white/15 transition-all">
-                  <div className="text-white flex-shrink-0 bg-white/20 rounded-lg p-2">
+                <div key={i} className="flex items-center gap-2 md:gap-3 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-white/15 transition-all">
+                  <div className="text-white flex-shrink-0 bg-white/20 rounded-lg p-1.5 md:p-2">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-sm mb-0.5 leading-tight">{item.title}</h3>
-                    <p className="text-blue-100 text-xs leading-tight">{item.desc}</p>
+                    <h3 className="text-white font-bold text-xs md:text-sm mb-0.5 leading-tight">{item.title}</h3>
+                    <p className="text-blue-100 text-[10px] md:text-xs leading-tight">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Redes Sociales - Debajo de las cards, alineadas con el mockup */}
-            <div className="flex items-center justify-end gap-2 mt-6 -mr-48">
+            <div className="flex items-center justify-center md:justify-end gap-2 mt-4 md:mt-6 md:-mr-48">
               <a href="#" className="w-8 h-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center transition">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
