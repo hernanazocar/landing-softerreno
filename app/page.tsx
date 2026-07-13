@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
 
                 <Image
-                  src="/screenshot.png"
+                  src="/mockup1.png"
                   alt="Dashboard Softerreno"
                   width={700}
                   height={700}
