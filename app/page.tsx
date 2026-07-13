@@ -47,7 +47,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section AZUL GRADIENTE CON LÍNEAS - FIT CONTENT */}
-      <section className="relative bg-gradient-to-br from-[#0f172a] via-[#1d4ed8] to-[#1e40af] py-3 md:py-4 overflow-hidden min-h-[calc(100vh-48px)] md:h-[calc(100vh-56px)]">
+      <section className="relative bg-gradient-to-br from-[#0f172a] via-[#1d4ed8] to-[#1e40af] py-3 md:py-4 overflow-hidden pb-6 md:h-[calc(100vh-56px)]">
         {/* Patrón de cuadrícula */}
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{
@@ -59,7 +59,7 @@ export default function Home() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-start md:justify-center py-2 md:py-4">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col justify-start md:justify-center py-2 md:py-4">
           <div className="grid lg:grid-cols-[1fr_1.3fr] gap-4 md:gap-8 items-center max-w-7xl mx-auto">
             {/* Left Content */}
             <div>
@@ -261,7 +261,7 @@ export default function Home() {
             </div>
 
             {/* Redes Sociales - Debajo de las cards, alineadas con el mockup */}
-            <div className="flex items-center justify-center md:justify-end gap-1.5 md:gap-2 mt-2 md:mt-6 md:-mr-48">
+            <div className="flex items-center justify-center md:justify-end gap-1.5 md:gap-2 mt-4 md:mt-6 md:-mr-48">
               <a href="#" className="w-7 h-7 md:w-8 md:h-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center transition">
                 <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
